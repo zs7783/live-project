@@ -10,23 +10,23 @@ import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-//ĞŞ¸Ä½çÃæ
+//ä¿®æ”¹ç•Œé¢
 public class ModifyDialog extends  JDialog implements ActionListener {
-    /*******************************¶¨Òå¸÷¿Ø¼ş**************************/
-    private JLabel lbMsg=new JLabel("ĞÕÃûÎª£º");
+    /*******************************å®šä¹‰å„æ§ä»¶**************************/
+    private JLabel lbMsg=new JLabel("å§“åä¸ºï¼š");
     private JLabel lbAccount=new JLabel(Conf.account);
-    private JLabel lbPassword=new JLabel("ÊäÈëÑ§ºÅ");
+    private JLabel lbPassword=new JLabel("è¾“å…¥å­¦å·");
     private JTextField pfPassword=new JTextField(Conf.password,15);
-    private JLabel lbPassword2=new JLabel("ÊäÈëÈ·ÈÏÑ§ºÅ");
+    private JLabel lbPassword2=new JLabel("è¾“å…¥ç¡®è®¤å­¦å·");
     private JTextField pfPassword2=new JTextField(Conf.password,12);
-    private JLabel lbName=new JLabel("ĞŞ¸ÄÈëĞ£Ê±¼ä");
-    private JTextField tfName=new JTextField(Conf.name,12);
-    private JLabel lbDept=new JLabel("ĞŞ¸ÄÀëĞ£Ê±¼ä");
-    private JTextField tfDept=new JTextField(Conf.dept,12);;
-    private JButton btModify=new JButton("¼ÇÂ¼");
-    private JButton btExit=new JButton("¹Ø±Õ");
+    private JLabel lbName=new JLabel("ä¿®æ”¹å…¥æ ¡æ—¶é—´");
+    private JTextField tfName=new JTextField(Conf.time,12);
+    private JLabel lbDept=new JLabel("ä¿®æ”¹ç¦»æ ¡æ—¶é—´");
+    private JTextField tfDept=new JTextField(Conf.leave,12);;
+    private JButton btModify=new JButton("è®°å½•");
+    private JButton btExit=new JButton("å…³é—­");
     public ModifyDialog(JFrame frm) {
-        /***********************½çÃæ³õÊ¼»¯***************************/
+        /***********************ç•Œé¢åˆå§‹åŒ–***************************/
         super(frm,true);
         this.setLayout(new GridLayout(6,2));
         this.add(lbMsg);
@@ -44,7 +44,7 @@ public class ModifyDialog extends  JDialog implements ActionListener {
         this.setSize(240,200);
         GUIUtil.toCenter(this);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        /*******************Ôö¼Ó¼àÌı*******************************/
+        /*******************å¢åŠ ç›‘å¬*******************************/
         btModify.addActionListener(this);
         btExit.addActionListener(this);
         this.setResizable(false);
@@ -56,17 +56,17 @@ public class ModifyDialog extends  JDialog implements ActionListener {
             String password1=pfPassword.getText();
             String password2=pfPassword2.getText();
             if(!password1.equals(password2)) {
-                JOptionPane.showMessageDialog(this,"Á½¸öÑ§ºÅ²»ÏàÍ¬");
+                JOptionPane.showMessageDialog(this,"ä¸¤ä¸ªå­¦å·ä¸ç›¸åŒ");
                 return;
             }
             String name=tfName.getText();
             String dept=tfDept.getText();
-            //½«ĞÂµÄÖµ´æÈë¾²Ì¬±äÁ¿
+            //å°†æ–°çš„å€¼å­˜å…¥é™æ€å˜é‡
             Conf.password=password1;
-            Conf.name=name;
-            Conf.dept=dept;
+            Conf.time=name;
+            Conf.leave=dept;
             FileOpe.updateCustomer(Conf.account,password1,name,dept);
-            JOptionPane.showMessageDialog(this,"ĞŞ¸Ä³É¹¦");
+            JOptionPane.showMessageDialog(this,"ä¿®æ”¹æˆåŠŸ");
         }
         else {
             this.dispose();
