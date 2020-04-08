@@ -1,11 +1,11 @@
-package UserManageSystem ;
+package UserManageSystem;
 import java.io.FileReader;
 import java.io.PrintStream;
 import java.util.Properties;
 import javax.swing.JOptionPane;
 
 public class FileOpe {
-    private static String fileName="D:\\workpace\\Gui\\bin\\UserManageSystem\\cus.inc";
+    private static String fileName="C:\\Users\\Administrator\\Desktop\\javaxxx\\211706186 林航\\bin\\UserManageSystem\\cus.inc";
     private static Properties pps;
     static {
         pps=new Properties();
