@@ -37,8 +37,8 @@ public class OperationFrame extends JFrame implements ActionListener {
             String message="详细资料为:\n";
             message+="姓名："+Conf.account+"\n";
             message+="学号："+Conf.password+"\n";
-            message+="入校时间："+Conf.name+"\n";
-            message+="离校时间："+Conf.dept+"\n";
+            message+="入校时间："+Conf.time+"\n";
+            message+="离校时间："+Conf.leave+"\n";
             JOptionPane.showMessageDialog(this,message);
         }
         else if(e.getSource()==btModify) {
