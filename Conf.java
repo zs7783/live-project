@@ -1,8 +1,8 @@
 package UserManageSystem;
 
 public class Conf {
-    public static String account;//±£´æµÇÂ¼ÓÃ»§µÄĞÕÃû¡£
-    public static String password;//±£´æµÇÂ¼ÓÃ»§µÄÑ§ºÅ¡£
-    public static String name;//±£´æµÇÂ¼ÓÃ»§µÄÈëĞ£Ê±¼ä
-    public static String dept;//±£´æµÇÂ¼ÓÃ»§µÄÀëĞ£Ê±¼ä¡£
-}
+    public static String account;//ä¿å­˜ç™»å½•ç”¨æˆ·çš„å§“åã€‚
+    public static String password;//ä¿å­˜ç™»å½•ç”¨æˆ·çš„å­¦å·ã€‚
+    public static String name;//ä¿å­˜ç™»å½•ç”¨æˆ·çš„å…¥æ ¡æ—¶é—´
+    public static String dept;//ä¿å­˜ç™»å½•ç”¨æˆ·çš„ç¦»æ ¡æ—¶é—´ã€‚
+} 
