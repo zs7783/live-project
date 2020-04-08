@@ -1,4 +1,4 @@
-package UserManageSystem;
+åŒ… UserManageSystem ;#
 import java.io.FileReader;
 import java.io.PrintStream;
 import java.util.Properties;
@@ -15,7 +15,7 @@ public class FileOpe {
             pps.load(reader);
         }
         catch (Exception ex) {
-            JOptionPane.showMessageDialog(null,"ÎÄ¼ş²Ù×÷Òì³£");
+            JOptionPane.showMessageDialog(null,"æ–‡ä»¶æ“ä½œå¼‚å¸¸");
             System.exit(0);
         }
         finally {
@@ -32,7 +32,7 @@ public class FileOpe {
             pps.list(ps);
         }
         catch (Exception ex) {
-            JOptionPane.showMessageDialog(null,"ÎÄ¼ş²Ù×÷Òì³£");
+            JOptionPane.showMessageDialog(null,"æ–‡ä»¶æ“ä½œå¼‚å¸¸");
             System.exit(0);
         }
         finally {
