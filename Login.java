@@ -1,12 +1,11 @@
 package UserManageSystem;
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
  
 public class Login{
     public static void main (String []args){
  
-        AFrame f = new AFrame("Ñ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³");
+        AFrame f = new AFrame("å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ");
     }
 }
 class AFrame extends JFrame{
@@ -18,20 +17,20 @@ class AFrame extends JFrame{
     public AFrame(String title){
         super(title);
         this.setLayout(null);
-        b1 =new Button("µÇÂ½");
-        b2 =new Button("Àë¿ª");
+        b1 =new Button("ç™»é™†");
+        b2 =new Button("ç¦»å¼€");
     
         t1 =new JTextField(25);
-        t1.setFont(new Font("ËÎÌå",Font.BOLD,25));
+        t1.setFont(new Font("å®‹ä½“",Font.BOLD,25));
  
         t2 =new JPasswordField(25);
-        t2.setFont(new Font("ËÎÌå",Font.BOLD,25));
+        t2.setFont(new Font("å®‹ä½“",Font.BOLD,25));
  
-        JLabel nameLabel = new JLabel("ÓÃ»§Ãû");
-        nameLabel.setFont(new Font("ËÎÌå",Font.BOLD,25));
+        JLabel nameLabel = new JLabel("ç”¨æˆ·å");
+        nameLabel.setFont(new Font("å®‹ä½“",Font.BOLD,25));
         nameLabel.setHorizontalAlignment(JTextField.CENTER);
-        JLabel pwdLabel = new JLabel("ÃÜÂë");
-        pwdLabel.setFont(new Font("ËÎÌå",Font.BOLD,25));
+        JLabel pwdLabel = new JLabel("å¯†ç ");
+        pwdLabel.setFont(new Font("å®‹ä½“",Font.BOLD,25));
         pwdLabel.setHorizontalAlignment(JTextField.CENTER);
  
         this.setBounds(300,300,1000,500);
@@ -53,7 +52,7 @@ class AFrame extends JFrame{
  
         b2.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-                JOptionPane.showMessageDialog(null,"µ¥»÷È·¶¨ÍË³ö");
+                JOptionPane.showMessageDialog(null,"å•å‡»ç¡®å®šé€€å‡º");
                 System.exit(0);
             }
         });
@@ -65,12 +64,12 @@ class AFrame extends JFrame{
         public void actionPerformed(ActionEvent e){
                 String str ="123456";
                 if(t1.getText().equals(str) ){
-                    JFrame f1 = new JFrame("Ñ§ÉúĞÅÏ¢¹ÜÀíÏµÍ³");
+                    JFrame f1 = new JFrame("å­¦ç”Ÿä¿¡æ¯ç®¡ç†ç³»ç»Ÿ");
                     f1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                     f1.setVisible(true);
                 }else{
                     System.out.print(t1.getText());
-                    JOptionPane.showMessageDialog(null, "ÕËºÅ»òÕßÃÜÂë´íÎó", "Error.mxy",JOptionPane.ERROR_MESSAGE); 
+                    JOptionPane.showMessageDialog(null, "è´¦å·æˆ–è€…å¯†ç é”™è¯¯", "Error.mxy",JOptionPane.ERROR_MESSAGE); 
             
                 }
         }
