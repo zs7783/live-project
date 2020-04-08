@@ -6,17 +6,16 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-//²Ù×÷½çÃæ
 public class OperationFrame extends JFrame implements ActionListener {
-    /************************¶¨Òå¸÷¿Ø¼ş******************************/
-    private String welcomMsg="Ñ¡ÔñÈçÏÂ²Ù×÷:";
+    /************************å®šä¹‰å„æ§ä»¶******************************/
+    private String welcomMsg="é€‰æ‹©å¦‚ä¸‹æ“ä½œ:";
     private JLabel lblWelcome=new JLabel(welcomMsg);
-    private JButton btQuery=new JButton("ÏÔÊ¾ÏêÏ¸ĞÅÏ¢");
-    private JButton btModify=new JButton("¼ÇÂ¼ÀëĞ£ĞÅÏ¢");
-    private JButton btExit=new JButton("ÍË³ö");
+    private JButton btQuery=new JButton("æ˜¾ç¤ºè¯¦ç»†ä¿¡æ¯");
+    private JButton btModify=new JButton("è®°å½•ç¦»æ ¡ä¿¡æ¯");
+    private JButton btExit=new JButton("é€€å‡º");
     public OperationFrame() {
-        /****************************½çÃæ³õÊ¼»¯************************/
-        super("µ±Ç°²éÑ¯: "+Conf.account);
+        /****************************ç•Œé¢åˆå§‹åŒ–************************/
+        super("å½“å‰æŸ¥è¯¢: "+Conf.account);
         this.setLayout(new GridLayout(4,1));
         this.add(lblWelcome);
         this.add(btQuery);
@@ -27,7 +26,7 @@ public class OperationFrame extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.setVisible(true);
-        /**********************Ôö¼Ó¼àÌı*******************************/
+        /**********************å¢åŠ ç›‘å¬*******************************/
         btQuery.addActionListener(this);
         btModify.addActionListener(this);
         btExit.addActionListener(this);
@@ -35,18 +34,18 @@ public class OperationFrame extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==btQuery) {
-            String message="ÏêÏ¸×ÊÁÏÎª:\n";
-            message+="ĞÕÃû£º"+Conf.account+"\n";
-            message+="Ñ§ºÅ£º"+Conf.password+"\n";
-            message+="ÈëĞ£Ê±¼ä£º"+Conf.name+"\n";
-            message+="ÀëĞ£Ê±¼ä£º"+Conf.dept+"\n";
+            String message="è¯¦ç»†èµ„æ–™ä¸º:\n";
+            message+="å§“åï¼š"+Conf.account+"\n";
+            message+="å­¦å·ï¼š"+Conf.password+"\n";
+            message+="å…¥æ ¡æ—¶é—´ï¼š"+Conf.name+"\n";
+            message+="ç¦»æ ¡æ—¶é—´ï¼š"+Conf.dept+"\n";
             JOptionPane.showMessageDialog(this,message);
         }
         else if(e.getSource()==btModify) {
             new ModifyDialog(this);
         }
         else {
-            JOptionPane.showMessageDialog(this,"Ğ»Ğ»¹âÁÙ");
+            JOptionPane.showMessageDialog(this,"è°¢è°¢å…‰ä¸´");
             System.exit(0);
         }
     }
