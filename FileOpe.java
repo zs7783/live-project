@@ -48,13 +48,13 @@ public class FileOpe {
             String[] infos=cusInfo.split("#");
             Conf.account=account;
             Conf.password=infos[0];
-            Conf.name=infos[1];
-            Conf.dept=infos[2];
+            Conf.time=infos[1];
+            Conf.leave=infos[2];
         }
     }
     public static void updateCustomer(String account,String password,
-                                      String name,String dept) {
-        pps.setProperty(account,password+"#"+name+"#"+dept);
+                                      String time,String leave) {
+        pps.setProperty(account,password+"#"+time+"#"+leave);
         listInfo();
     }
 }
