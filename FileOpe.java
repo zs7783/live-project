@@ -1,4 +1,4 @@
-包 UserManageSystem ;
+package UserManageSystem ;
 import java.io.FileReader;
 import java.io.PrintStream;
 import java.util.Properties;
