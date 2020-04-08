@@ -5,7 +5,7 @@ import java.util.Properties;
 import javax.swing.JOptionPane;
 
 public class FileOpe {
-    private static String fileName="D:\\workpace\\Gui\\bin\\UserManageSystem\\cus.inc";
+    private static String fileName="cus.inc";
     private static Properties pps;
     static {
         pps=new Properties();
