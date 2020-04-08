@@ -7,7 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 public class OperationFrame extends JFrame implements ActionListener {
-    /************************定义各控件******************************/
+   
     private String welcomMsg="选择如下操作:";
     private JLabel lblWelcome=new JLabel(welcomMsg);
     private JButton btQuery=new JButton("显示详细信息");
